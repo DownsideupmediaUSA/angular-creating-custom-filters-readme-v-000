@@ -2,7 +2,7 @@
 
 ## Overview
 
-Just lie services and directives, we can also create custom filters to use in our application.
+Just like services and directives, we can also create custom filters to use in our application.
 
 ## Objectives
 

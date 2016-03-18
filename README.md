@@ -71,6 +71,16 @@ Awesome! We can now use this like any other filter in Angular.
 </div>
 ```
 
+Which will result in:
+
+```html
+<div>
+	MY STRING
+
+	OTHER STRING <!-- ctrl.variable = 'other string' -->
+</div>
+```
+
 ## Arguments
 
 We can also pass arguments through to our custom filters. Much like what we've done with the `date` filter before, we can pass through as many arguments we like to the filter, and they're then the 2nd, 3rd, etc, argument passed through to our function.
@@ -98,6 +108,8 @@ angular
 	.module('app')
 	.filter('makeUppercase', makeUppercase);
 ```
+
+As the `true` or `false` can also point to a variable's value instead (`{{ 'My String' | makeUppercase:variableName }}`), we can turn our filters on and off based on different variables. For instance, for administrators, we might want their name to be uppercase, but all other members just leave their names the same.
 
 Awesome!
 
@@ -132,7 +144,7 @@ angular
 Now we can filter through the array like we would in native JavaScript:
 
 ```js
-function makeUppercase() {
+function startsWithLetter() {
 	return function (items, letter) {
 		// items = ctrl.albums (an array of albums)
 		// letter = 'a'
@@ -145,7 +157,7 @@ function makeUppercase() {
 
 angular
 	.module('app')
-	.filter('makeUppercase', makeUppercase);
+	.filter('startsWithLetter', startsWithLetter);
 ```
 
 This will filter out our array, only returning items there the `name` property begins with the letter `a`. The array you return from this function will be all the elements that are displayed in the rendered `ng-repeat`.

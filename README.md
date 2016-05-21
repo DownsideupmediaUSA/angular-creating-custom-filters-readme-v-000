@@ -129,7 +129,7 @@ Assume that we have this:
 This is calling a custom filter named `startsWithLetter`, passing through `'a'` as an argument. We can then define our custom filter as follows:
 
 ```js
-function makeUppercase() {
+function startsWithLetter() {
 	return function (items, letter) {
 		// items = ctrl.albums (an array of albums)
 		// letter = 'a'
@@ -138,7 +138,7 @@ function makeUppercase() {
 
 angular
 	.module('app')
-	.filter('makeUppercase', makeUppercase);
+	.filter('startsWithLetter', startsWithLetter);
 ```
 
 Now we can filter through the array like we would in native JavaScript:

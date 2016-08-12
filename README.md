@@ -160,4 +160,6 @@ angular
 	.filter('startsWithLetter', startsWithLetter);
 ```
 
-This will filter out our array, only returning items there the `name` property begins with the letter `a`. The array you return from this function will be all the elements that are displayed in the rendered `ng-repeat`.
+This will filter out our array, only returning items where the `name` property begins with the letter `a`. The array you return from this function will be all the elements that are displayed in the rendered `ng-repeat`.
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/angular-creating-custom-filters-readme'>Creating Custom Filters </a> on Learn.co and start learning to code for free.</p>
